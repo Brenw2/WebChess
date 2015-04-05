@@ -1,0 +1,32 @@
+# Blender MTL File: 'Chessboard.blend'
+# Material Count: 3
+
+newmtl black
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.007194 0.001971 0.001852
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /home/bjw/SCECIOUSPIXELS/Projects/Best of Chess/checker_pattern.png
+
+newmtl border
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.024851 0.005587 0.000806
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /home/bjw/SCECIOUSPIXELS/Projects/Best of Chess/Wood dark.jpg
+
+newmtl white
+Ns 390.196078
+Ka 0.000000 0.000000 0.000000
+Kd 0.900000 0.870301 0.781206
+Ks 0.200000 0.200000 0.200000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /home/bjw/SCECIOUSPIXELS/Projects/Best of Chess/checker_pattern.png
