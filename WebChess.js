@@ -10,6 +10,7 @@ var windowHalfY = window.innerHeight / 2;
 
 var bishop;
 
+var position = {x:.56, y: .03, z: .57};
 
 
 
@@ -71,9 +72,43 @@ function whiteBishop() {
         object.position.y = .03;
         object.position.z = .57;
         scene.add(object);
-        runAnimationUp(object);
-       
+        tween = new TWEEN.Tween(object.position).to({
+        x: .56,
+        y: .3,
+        z: .57
+    }, 3000).delay(1000);
+     tween.easing( TWEEN.Easing.Elastic.Out).start();
+    
+        object.position.x = .56;
+        object.position.y = .3;
+        object.position.z = .57;    
+        
+    tween2 = new TWEEN.Tween(object.position).to({
+        x: .06,
+        y: .3,
+        z: .57
+    }, 3000).delay(3000);
+     tween2.easing( TWEEN.Easing.Elastic.Out).start();
+        
+        object.position.x = .045;
+        object.position.y = .3;
+        object.position.z = .57;
+        
+        
+    tween3 = new TWEEN.Tween(object.position).to({
+        x: .1 ,
+        y: .027,
+        z: .54
+    }, 1000).delay(6000);
+     tween3.start();    
+        
+        object.position.x = .56;
+        object.position.y = .03;
+        object.position.z = .57
+        
     }, onProgress, onError);
+    
+    
 }
 
 function ChessBoard() {
@@ -94,7 +129,7 @@ function ChessBoard() {
         object.position.x = 0;
         object.position.y = 0;
         scene.add(object);
-        runAnimationUp(object);
+         
     }, onProgress, onError);
 
 }
@@ -142,32 +177,7 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-function runAnimationUp(object) {
-      new TWEEN.Tween(object.position).to({
-        x: .56,
-        y: .3,
-        z: .57
-    }, 3000).delay(1000)
-      .easing( TWEEN.Easing.Elastic.Out).start();
-}
-
-function runAnimationMove(object) {
-     new TWEEN.Tween(object.position).to({
-        x: .77,
-        y: .3,
-        z: .57
-    }, 5000).delay(3000)
-      .easing( TWEEN.Easing.Elastic.Out).start();
-    
-}
-
-function runAnimationDown(object) {
-    new TWEEN.Tween(object.position).to({
-        x: .77,
-        y: .03,
-        z: .57
-    }, 3000).delay(5000)
-      .start();
+function animUp(){
     
 }
 
