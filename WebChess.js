@@ -10,7 +10,7 @@ var windowHalfY = window.innerHeight / 2;
 
 var bishop;
 
-var position = {x:.56, y: .03, z: .57};
+
 
 
 
@@ -177,11 +177,6 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-function animUp(){
-    
-}
-
-//
 
 function animate() {
     requestAnimationFrame(animate);
