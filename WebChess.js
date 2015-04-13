@@ -45,9 +45,8 @@ function init() {
     wPawn4 = new pieceLoader("White", "Pawn", .56, .03, .11);
     wPawn5 = new pieceLoader("White", "Pawn", .56, .03, -.12);
     wPawn6 = new pieceLoader("White", "Pawn", .56, .03, -.36);
-    wPawn7 = new pieceLoader("White", "Pawn", .56, .03, -.36);
-    wPawn8 = new pieceLoader("White", "Pawn", .56, .03, -.59);
-    wPawn9 = new pieceLoader("White", "Pawn", .56, .03, -.81);
+    wPawn7 = new pieceLoader("White", "Pawn", .56, .03, -.59);
+    wPawn8 = new pieceLoader("White", "Pawn", .56, .03, -.81);
 
 
     bKing = new pieceLoader("Black", "King", -.79, .03, .11);
@@ -69,15 +68,14 @@ function init() {
     bPawn4 = new pieceLoader("Black", "Pawn", -.56, .03, .11);
     bPawn5 = new pieceLoader("Black", "Pawn", -.56, .03, -.12);
     bPawn6 = new pieceLoader("Black", "Pawn", -.56, .03, -.36);
-    bPawn7 = new pieceLoader("Black", "Pawn", -.56, .03, -.36);
-    bPawn8 = new pieceLoader("Black", "Pawn", -.56, .03, -.59);
-    bPawn9 = new pieceLoader("Black", "Pawn", -.56, .03, -.81);
+    bPawn7= new pieceLoader("Black", "Pawn", -.56, .03, -.59);
+    bPawn8 = new pieceLoader("Black", "Pawn", -.56, .03, -.81);
 
     ChessBoard();
 
     //renderer
     renderer();
-
+    renderer.setClearColor( 0xffffff, 1);
     //Scene Controls
     controls();
 
