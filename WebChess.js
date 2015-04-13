@@ -26,16 +26,29 @@ function init() {
     directionalLightRight();
 
     // models
-    whiteBishop();
-    whitePawn(.56,.03,.80);
-    whitePawn(.56,.03,.57);
-    whitePawn(.56,.03,.34);
-    whitePawn(.56,.03,.11);
-    whitePawn(.56,.03,-.12);
-    whitePawn(.56,.03,-.36);
-    whitePawn(.56,.03,-.36);
-    whitePawn(.56,.03,-.59);
-    whitePawn(.56,.03,-.81);
+    wKing = new whiteKing(.79, .03, -.12);
+    
+    wQueen = new whiteQueen(.79, .03, .11);
+    
+    wKnight1 = new whiteKnight(.79, .03, .80);
+    wKnight2 = new whiteKnight(.79, .03, -.80);
+    
+    wBishop1 = new whiteBishop(.79, .03, .57);
+    wBishop2 = new whiteBishop(.79, .03, -.57);
+    
+    wRook1 = new whiteRook(.79, .03, .34);
+    wRook2 = new whiteRook(.79, .03, -.34);
+    
+    wPawn1 = new whitePawn(.56, .03, .80);
+    wPawn2 = new whitePawn(.56, .03, .57);
+    wPawn3 = new whitePawn(.56, .03, .34);
+    wPawn4 = new whitePawn(.56, .03, .11);
+    wPawn5 = new whitePawn(.56, .03, -.12);
+    wPawn6 = new whitePawn(.56, .03, -.36);
+    wPawn7 = new whitePawn(.56, .03, -.36);
+    wPawn8 = new whitePawn(.56, .03, -.59);
+    wPawn9 = new whitePawn(.56, .03, -.81);
+    
     ChessBoard();
 
     //renderer
@@ -49,8 +62,8 @@ function init() {
 
 function camera() {
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
-    camera.position.z = 0;
-    camera.position.y = 10;
+    camera.position.z = 12;
+    camera.position.y = 3;
     camera.position.x = 0;
 }
 
@@ -79,74 +92,21 @@ function controls() {
 
 }
 
-function whiteBishop() {
-    var onProgress = function (xhr) {
-        if (xhr.lengthComputable) {
-            var percentComplete = xhr.loaded / xhr.total * 100;
-            console.log(Math.round(percentComplete, 2) + '% downloaded');
-        }
-    };
-
-    var onError = function (xhr) {};
-
-
-    THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
-    var loader = new THREE.OBJMTLLoader();
-    loader.load('chessPiece/WhiteBishop.obj', 'chessPiece/WhiteBishop.mtl', function (object) {
-
-        object.position.x = .79;
-        object.position.y = .03;
-        object.position.z = .57;
-        scene.add(object);
-
-        tweeenUp(object);
-        tweenAcross(object);
-        tweenDown(object);
-
-    }, onProgress, onError);
-
-
-}
-
-function whitePawn(x,y,z) {
-    var onProgress = function (xhr) {
-        if (xhr.lengthComputable) {
-            var percentComplete = xhr.loaded / xhr.total * 100;
-            console.log(Math.round(percentComplete, 2) + '% downloaded');
-        }
-    };
-
-    var onError = function (xhr) {};
-
-    THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
-    var loader = new THREE.OBJMTLLoader();
-    loader.load('chessPiece/WhitePawn.obj', 'chessPiece/WhitePawn.mtl', function (object) {
-
-        object.position.x = x;//.56
-        object.position.y = y;//.03
-        object.position.z = z;//.57
-        scene.add(object);
-
-    }, onProgress, onError);
-
-
-}
-
 
 
 function ChessBoard() {
-    var onProgress = function (xhr) {
+    var onProgress = function(xhr) {
         if (xhr.lengthComputable) {
             var percentComplete = xhr.loaded / xhr.total * 100;
             console.log(Math.round(percentComplete, 2) + '% downloaded');
         }
     };
-    var onError = function (xhr) {};
+    var onError = function(xhr) {};
 
     THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
 
     var loader = new THREE.OBJMTLLoader();
-    loader.load('chessPiece/Chessboard.obj', 'chessPiece/Chessboard.mtl', function (object) {
+    loader.load('chessPiece/Chessboard.obj', 'chessPiece/Chessboard.mtl', function(object) {
         object.position.x = 0;
         object.position.y = 0;
         scene.add(object);
