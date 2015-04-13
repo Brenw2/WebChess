@@ -1,0 +1,11 @@
+# Blender MTL File: 'BlackQueen.blend'
+# Material Count: 1
+
+newmtl matChalkGrey001
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.010000 0.010000 0.010000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1

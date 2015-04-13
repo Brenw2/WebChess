@@ -26,29 +26,53 @@ function init() {
     directionalLightRight();
 
     // models
-    wKing = new whiteKing(.79, .03, -.12);
-    
-    wQueen = new whiteQueen(.79, .03, .11);
-    
-    wKnight1 = new whiteKnight(.79, .03, .80);
-    wKnight2 = new whiteKnight(.79, .03, -.80);
-    
-    wBishop1 = new whiteBishop(.79, .03, .57);
-    wBishop2 = new whiteBishop(.79, .03, -.57);
-    
-    wRook1 = new whiteRook(.79, .03, .34);
-    wRook2 = new whiteRook(.79, .03, -.34);
-    
-    wPawn1 = new whitePawn(.56, .03, .80);
-    wPawn2 = new whitePawn(.56, .03, .57);
-    wPawn3 = new whitePawn(.56, .03, .34);
-    wPawn4 = new whitePawn(.56, .03, .11);
-    wPawn5 = new whitePawn(.56, .03, -.12);
-    wPawn6 = new whitePawn(.56, .03, -.36);
-    wPawn7 = new whitePawn(.56, .03, -.36);
-    wPawn8 = new whitePawn(.56, .03, -.59);
-    wPawn9 = new whitePawn(.56, .03, -.81);
-    
+    wKing = new pieceLoader("White", "King", .79, .03, -.12);
+
+    wQueen = new pieceLoader("White", "Queen", .79, .03, .11);
+
+    wKnight1 = new pieceLoader("White", "Knight", .79, .03, .80);
+    wKnight2 = new pieceLoader("White", "Knight", .79, .03, -.80);
+
+    wBishop1 = new pieceLoader("White", "Bishop", .79, .03, .57);
+    wBishop2 = new pieceLoader("White", "Bishop", .79, .03, -.57);
+
+    wRook1 = new pieceLoader("White", "Rook", .79, .03, .34);
+    wRook2 = new pieceLoader("White", "Rook", .79, .03, -.34);
+
+    wPawn1 = new pieceLoader("White", "Pawn", .56, .03, .80);
+    wPawn2 = new pieceLoader("White", "Pawn", .56, .03, .57);
+    wPawn3 = new pieceLoader("White", "Pawn", .56, .03, .34);
+    wPawn4 = new pieceLoader("White", "Pawn", .56, .03, .11);
+    wPawn5 = new pieceLoader("White", "Pawn", .56, .03, -.12);
+    wPawn6 = new pieceLoader("White", "Pawn", .56, .03, -.36);
+    wPawn7 = new pieceLoader("White", "Pawn", .56, .03, -.36);
+    wPawn8 = new pieceLoader("White", "Pawn", .56, .03, -.59);
+    wPawn9 = new pieceLoader("White", "Pawn", .56, .03, -.81);
+
+
+    bKing = new pieceLoader("Black", "King", -.79, .03, .11);
+
+    bQueen = new pieceLoader("Black", "Queen", -.79, .03, -.12);
+
+    bKnight1 = new pieceLoader("Black", "Knight", -.79, .03, .80);
+    bKnight2 = new pieceLoader("Black", "Knight", -.79, .03, -.80);
+
+    bBishop1 = new pieceLoader("Black", "Bishop", -.79, .03, .57);
+    bBishop2 = new pieceLoader("Black", "Bishop", -.79, .03, -.57);
+
+    bRook1 = new pieceLoader("Black", "Rook", -.79, .03, .34);
+    bRook2 = new pieceLoader("Black", "Rook", -.79, .03, -.34);
+
+    bPawn1 = new pieceLoader("Black", "Pawn", -.56, .03, .80);
+    bPawn2 = new pieceLoader("Black", "Pawn", -.56, .03, .57);
+    bPawn3 = new pieceLoader("Black", "Pawn", -.56, .03, .34);
+    bPawn4 = new pieceLoader("Black", "Pawn", -.56, .03, .11);
+    bPawn5 = new pieceLoader("Black", "Pawn", -.56, .03, -.12);
+    bPawn6 = new pieceLoader("Black", "Pawn", -.56, .03, -.36);
+    bPawn7 = new pieceLoader("Black", "Pawn", -.56, .03, -.36);
+    bPawn8 = new pieceLoader("Black", "Pawn", -.56, .03, -.59);
+    bPawn9 = new pieceLoader("Black", "Pawn", -.56, .03, -.81);
+
     ChessBoard();
 
     //renderer
@@ -62,7 +86,7 @@ function init() {
 
 function camera() {
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
-    camera.position.z = 12;
+    camera.position.z = 0;
     camera.position.y = 3;
     camera.position.x = 0;
 }
